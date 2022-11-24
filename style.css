@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+h3 {
+    color:#aaa;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+}
+
+.container {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    border-radius: 0.5rem;
+    border: 2px solid #333;
+    width: 50vw;
+    height: 40vh;
+    margin: 1rem 0;
+    padding: 2rem;
+    position: relative;
+}
+
+.card:nth-child(odd) {
+    transform: translateX(-100vw);
+}
+
+.card:nth-child(even) {
+    transform: translateX(+100vw);
+}
+
+.card.show {
+    transform: translateX(0);
+}
+
+.createdBy {
+    position: absolute;
+    bottom:0;
+    left:0;
+    margin: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.profileImg {
+    border-radius: 50%;
+    border: 1px #fff solid;
+}
+
+.badge {
+
+    padding: 0.2rem 1rem;
+    background: #aaa;
+    color:#fff;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.badge i {
+    margin-right: 0.2rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 60vw;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 75vw;
+        height: 30vh;
+    }
+    h3 {
+
+        font-size: 0.8rem;
+
+
+    }
+}
+
+@media (max-height: 500px) {
+    .card {
+
+        height: 50vh;
+    }
+}
